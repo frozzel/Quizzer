@@ -1,12 +1,13 @@
 :root{
-    --purp: blueviolet;
-    --dkbl: rgb(11, 17, 140);
+    --purp: rgb(172, 25, 217);
+    --dkbl: rgb(47, 27, 103);
     --wht: white;
 
 }
 
 * {
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 
 }
 
@@ -58,5 +59,9 @@ button:hover {
   }
 
 #btn {
+    text-align: center;
+}
+main {
+    max-width: 100;
     text-align: center;
 }
