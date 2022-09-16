@@ -1,0 +1,62 @@
+:root{
+    --purp: blueviolet;
+    --dkbl: rgb(11, 17, 140);
+    --wht: white;
+
+}
+
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+
+}
+
+.bodywrap {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.header {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+
+}
+.score {
+    position:absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--purp);
+    font-size: x-large;
+}
+.timer {
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    color: var(--purp);
+    font-size: x-large;
+}
+button {
+    font-size: 22px;
+    padding: 14px 34px;
+    margin: 16px 16px 16px 20px;
+    cursor: grab;
+    background-color: var(--dkbl);
+    border-radius: 10px;
+    color: var(--wht);
+    display: inline-block;
+    line-height: 12px;
+    text-align: center;
+    box-shadow: gray;
+
+}
+button:hover {
+    cursor: default;
+    background: var(--purp);
+  }
+
+#btn {
+    text-align: center;
+}
