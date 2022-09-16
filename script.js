@@ -29,9 +29,9 @@ function openBox(){
  } 
 }
 
-timerfun()
+
  //////////////Logic/////////////////////////////
 
 
 ////Add some clics//////
-generateBtn.addEventListener("click", openBox);
+generateBtn.addEventListener("click", timerfun);
