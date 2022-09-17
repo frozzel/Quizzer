@@ -1,36 +1,35 @@
  //////////////Varibles/////////////////////////////
 var generateBtn = document.querySelector("#startquiz");
-var test;
 var timer = document.getElementById("time-limit");
-
+var StartQcon = document.querySelector('.StartQuiz')
 
 
  //////////////Arrays?//////////////////////////////
+StartQcon.children[0].textContent= "Test";
+
 
  //////////////Funtions/////////////////////////////
 
-function timerfun(){
+
+
+
+
+
+
+ //////////////Logic/////////////////////////////
+ 
+ 
+ function timerfun(){
    var startTime= 100;
    var interval= setInterval(function(){
       startTime--;
       timer.textContent = " Time:  "  +startTime;
       if (startTime===0){
-         // clearInterval(startTime);
+         clearInterval(startTime);
          
       }
    }, 1000)
 }
-
-
-function openBox(){
- if (confirm("its working") ){
-    var test = true
-    console.log(test)
- } 
-}
-
-
- //////////////Logic/////////////////////////////
 
 
 ////Add some clics//////
