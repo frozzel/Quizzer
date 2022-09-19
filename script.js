@@ -3,7 +3,11 @@ var generateBtn = document.querySelector("#startquiz");
 var timer = document.getElementById("time-limit");
 var StartQcon = document.querySelector('.StartQuiz')
 var dispTime = document.querySelector('#score')
+var quest = document.getElementById('quest')
+var questOrder = 0;
 var startTime = 100;
+
+
  //////////////Object//////////////////////////////
 /////// https://www.w3schools.com/js/js_objects.asp //////////
  
@@ -39,15 +43,26 @@ var questObject = [
 
 
 
- //////////////Funtions/////////////////////////////
+ //////////////Funtions/////////////////////////////////////////////
+ /// https://www.dofactory.com/javascript/function-objects ////////
+
 function StartQuiz(){
+   var startq1 = document.getElementById('firstpg')
+   startq1.setAttribute('class', 'hidden');
+   quest.setAttribute('class', 'StartQuiz')
+   ////////need function to call quest//////
    timerfun()
-   StartQcon.children[1].textContent= "";
-   StartQcon.children[2].textContent= "";
-   StartQcon.children[0].textContent= "Commonly used data types DO Not Include:";
+   crtquest()
 }
 
+function crtquest(){
+   var firstquest = questObject[questOrder];
+   var qh1= document.getElementById('qh1');
+   qh1.textContent = firstquest.quest;
+   
+   console.log('Should display first quest')
 
+}
 
 
 
@@ -59,7 +74,7 @@ function StartQuiz(){
    var interval= setInterval(function(){
       startTime--;
       timer.textContent =   +startTime;
-      if (startTime===0){
+      if (startTime<=0){
          clearInterval(startTime);
          
       }
