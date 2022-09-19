@@ -4,7 +4,9 @@ var timer = document.getElementById("time-limit");
 var StartQcon = document.querySelector('.StartQuiz')
 var dispTime = document.querySelector('#score')
 var quest = document.getElementById('quest')
+var opt = document.getElementById('qopt')
 var questOrder = 0;
+var optOrder =0;
 var startTime = 100;
 
 
@@ -54,13 +56,20 @@ function StartQuiz(){
    timerfun()
    crtquest()
 }
+///////////// https://www.w3schools.com/Js/js_object_display.asp /////////
 
 function crtquest(){
    var firstquest = questObject[questOrder];
    var qh1= document.getElementById('qh1');
    qh1.textContent = firstquest.quest;
-   
    console.log('Should display first quest')
+   opt.innerHTML = '';
+   // var firstopt = questObject[optOrder];
+   // var qopt= document.getElementById('qopt').innerHTML = JSON.stringify(questObject.qopt);
+   // qopt.textContent = firstopt.opt;
+
+   /////////// ***** TO DO: need more research not displaying correctly**** /////////
+   console.log('questions display')
 
 }
 
@@ -76,7 +85,7 @@ function crtquest(){
       timer.textContent =   +startTime;
       if (startTime<=0){
          clearInterval(startTime);
-         
+         ///// *****TO DO add funtion to stop quiz above *****//////
       }
    }, 1000)
 }
