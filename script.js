@@ -16,7 +16,7 @@ var startTime = 100;
 var questObject = [
    {
       quest: 'Commonly used data types DO Not Include:',
-      opt: ['1. Strings', '2. Booleans', '3. Alerts', '4. Numbers'],
+      opt: ['Strings', 'Booleans', 'Alerts', 'Numbers'],
       ans: '3. Alerts',
    },
    {
@@ -57,19 +57,27 @@ function StartQuiz(){
    crtquest()
 }
 ///////////// https://www.w3schools.com/Js/js_object_display.asp /////////
-
+//////////// https://www.w3schools.com/jsref/jsref_forEach.asp ////////////
 function crtquest(){
    var firstquest = questObject[questOrder];
    var qh1= document.getElementById('qh1');
    qh1.textContent = firstquest.quest;
    console.log('Should display first quest')
    opt.innerHTML = '';
-   // var firstopt = questObject[optOrder];
-   // var qopt= document.getElementById('qopt').innerHTML = JSON.stringify(questObject.qopt);
-   // qopt.textContent = firstopt.opt;
+   firstquest.opt.forEach(function(qopt,i){
+      var optSector =document.createElement("button");
+      optSector.setAttribute("class", "qopt");
+      optSector.setAttribute("value", opt);
+      optSector.textContent = i + 1 + "." + qopt;
+      optSector.onclick=questTouch;
+      opt.appendChild(optSector)
+   })
+      
+
+   
 
    /////////// ***** TO DO: need more research not displaying correctly**** /////////
-   console.log('questions display')
+   /////////// ***** Displaying in button just not on right side fix if time allows latter////////
 
 }
 
@@ -78,6 +86,9 @@ function crtquest(){
 
  //////////////Logic/////////////////////////////
  
+ function questTouch(){
+
+ }
  
  function timerfun(){
    var interval= setInterval(function(){

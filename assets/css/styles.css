@@ -51,6 +51,7 @@ button {
     line-height: 12px;
     text-align: center;
     box-shadow: gray;
+    width: 200px;
 
 }
 button:hover {
@@ -71,6 +72,8 @@ main {
 .StartQuiz  h1 {
     text-align: center;
     font-size: 40px;
+    display: flex;
+    flex-direction: column;
     
 }
 
