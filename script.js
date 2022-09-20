@@ -116,6 +116,7 @@ function stopQuiz(){
    }
  }
  
+ 
  function timerfun(){
    var interval= setInterval(function(){
       startTime--;
