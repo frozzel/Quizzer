@@ -103,3 +103,14 @@ main {
     /* Need to fix so extends across the box if time permits */
     
 }
+
+.scoreboard {
+    text-align: center;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: var(--purp);
+}
