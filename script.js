@@ -5,6 +5,7 @@ var StartQcon = document.querySelector('.StartQuiz')
 var dispTime = document.querySelector('#score')
 var quest = document.getElementById('quest')
 var opt = document.getElementById('qopt')
+var ansTrue = document.getElementById('ansTrue')
 var questOrder = 0;
 var optOrder =0;
 var startTime = 100;
@@ -72,10 +73,6 @@ function crtquest(){
       optSector.onclick=questTouch;
       opt.appendChild(optSector)
    })
-      
-
-   
-
    /////////// ***** TO DO: need more research not displaying correctly**** /////////
    /////////// ***** Displaying in button just not on right side fix if time allows latter////////
 
@@ -87,7 +84,19 @@ function crtquest(){
  //////////////Logic/////////////////////////////
  
  function questTouch(){
+   if (this.value !== questObject[questOrder].ans){
+      startTime -= 10;
+      if (startTime <0){
+         startTime = 0;
+      }
+      timer.textContent = startTime;
+      ansTrue.textContent= "Wrong!";
 
+   } else {
+      ansTrue.textContent = "Correct";
+   }
+
+   ansTrue.setAttribute('class', 'ansShow');
  }
  
  function timerfun(){
