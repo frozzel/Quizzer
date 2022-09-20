@@ -26,15 +26,15 @@ Site Link---  (https://frozzel.github.io/Quizzer/)
 ![Screen Shot](./assets/images/Shot.png)
     
 ## Credits
-Dennis Hickox ![Github](https://github.com/frozzel)
+Dennis Hickox (https://github.com/frozzel)
 
-w3Schools ![w3schools](https://www.w3schools.com/js/js_objects.asp)
+w3Schools (https://www.w3schools.com/js/js_objects.asp)
 
-dofactory ![dofactory]( https://www.dofactory.com/javascript/function-objects)
+dofactory  https://www.dofactory.com/javascript/function-objects)
 
-w3Schools ![w3schools]( https://www.w3schools.com/Js/js_object_display.asp)
+w3Schools (https://www.w3schools.com/Js/js_object_display.asp)
 
-w3Schools ![w3schools] https://www.w3schools.com/jsref/jsref_forEach.asp)
+w3Schools  (https://www.w3schools.com/jsref/jsref_forEach.asp)
 
 ## License
 
