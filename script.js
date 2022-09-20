@@ -18,27 +18,27 @@ var questObject = [
    {
       quest: 'Commonly used data types DO Not Include:',
       opt: ['Strings', 'Booleans', 'Alerts', 'Numbers'],
-      ans: '3. Alerts',
+      ans: 'Alerts',
    },
    {
       quest: 'The condition in an if / else statement is enclosed with ________.',
-      opt: ['1. Quotes', '2. Curly Brackets', '3. Parenthesis', '4. Square Brackets'],
-      ans: '3. Parenthesis',
+      opt: ['Quotes', 'Curly Brackets', 'Parenthesis', 'Square Brackets'],
+      ans: 'Parenthesis',
    },
    {
       quest: 'Arrays in JavaScript can be used to store_________.',
-      opt: ['1. numbers and strings', '2. other arrays', '3. booleans', '4. all of the above'],
-      ans: '4. all of the above',
+      opt: ['numbers and strings', 'other arrays', 'booleans', 'all of the above'],
+      ans: 'all of the above',
    },
    {
       quest: 'String values must be enclosed within________ when being assigned to variables.',
-      opt: ['1. commas', '2. curly brackets', '3. quotes', '4. parenthesis'],
-      ans: '3. quotes',
+      opt: ['commas', 'curly brackets', 'quotes', 'parenthesis'],
+      ans: 'quotes',
    },
    {
       quest: 'A very useful tool used during development and debugging for printing content to the debugger is:',
-      opt: ['1. JavaScript', '2. terminal/bash', '3. for loops', '4. console. log'],
-      ans: '4. console. log',
+      opt: ['JavaScript', 'terminal/bash', 'for loops', 'console. log'],
+      ans: 'console. log',
    }
 ]
 
@@ -75,8 +75,17 @@ function crtquest(){
    })
    /////////// ***** TO DO: need more research not displaying correctly**** /////////
    /////////// ***** Displaying in button just not on right side fix if time allows latter////////
+   ///////////// ^^^^^^^^^^^^^Done^^^^^^^^????????///////////
 
 }
+function stopQuiz(){
+   qh1.textContent = ('')
+   opt.innerHTML = ('')
+   ansTrue.setAttribute('class', 'hidden')
+   var stopit = document.getElementById('stopit')
+   stopit.setAttribute('class', 'StartQuiz')
+}
+   
 
 
 
@@ -92,20 +101,30 @@ function crtquest(){
       timer.textContent = startTime;
       ansTrue.textContent= "Wrong!";
 
-   } else {
+   } 
+   (this.value === questObject[questOrder].ans)
       ansTrue.textContent = "Correct";
-   }
+   
 
    ansTrue.setAttribute('class', 'ansShow');
+   questOrder++;
+   if (questOrder=== questObject.length){
+      stopQuiz();
+
+   } else {
+      crtquest()
+   }
  }
  
  function timerfun(){
    var interval= setInterval(function(){
       startTime--;
-      timer.textContent =   +startTime;
+      timer.textContent = +startTime;
       if (startTime<=0){
-         clearInterval(startTime);
+         clearInterval(interval);
+         stopQuiz()
          ///// *****TO DO add funtion to stop quiz above *****//////
+         //////// Done^^^^^^^///////////////////////////
       }
    }, 1000)
 }
